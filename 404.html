@@ -1,0 +1,18 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+</head>
+<body>
+  <script>
+    var segmentCount = window.location.pathname.split('/').length;
+    if (segmentCount === 2) {
+      window.location.replace(window.location.href + '/');
+    } else {
+      window.location.replace(window.location.origin);
+    }
+  </script>
+</body>
+</html>
