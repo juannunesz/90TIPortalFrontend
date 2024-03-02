@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SupplierService {
-  private supplierPath: string = `${environment.noventaApi}/Fornecedor`
+  private supplierPath: string = `https://localhost:7021/api/Fornecedor`
 
   constructor(private http: HttpClient) { }
 

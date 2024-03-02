@@ -8,7 +8,7 @@ import { IState } from '../interface/IState';
   providedIn: 'root'
 })
 export class StateService {
-  private statePath: string = `${environment.noventaApi}/Estado`
+  private statePath: string = `https://localhost:7021/api/Estado`
 
   constructor(private http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  private authPath: string = `${environment.noventaApi}/Acesso`
+  private authPath: string = `https://localhost:7021/api/Acesso`
   userInfo: EventEmitter<IUserRegister> = new EventEmitter();
 
   constructor(private http: HttpClient) { }

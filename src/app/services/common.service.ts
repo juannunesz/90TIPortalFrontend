@@ -21,7 +21,7 @@ const ToastObj = Swal.mixin({
 export class CommonService {
 
   viacep: string = environment.viacepApi;
-  serpro: string = environment.serproApi;
+  serpro: string = 'https://receitaws.com.br/v1';
 
   isSelectedLink: EventEmitter<any> = new EventEmitter;
 
