@@ -1,0 +1,429 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Inter'; // Escolha um nome para a fonte
+  src: url('./assets/font/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype'); // Substitua o caminho e o formato da fonte conforme necessário
+  font-weight: normal; // Pode ser normal ou bold
+  font-style: normal; // Pode ser normal ou italic
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+nz-tag {
+  border-radius: 4px !important;
+
+  &.noventa-orange {
+    border: 1px solid #EC7000;
+    background-color: rgba(236, 112, 0, 0.15);
+    padding: 3px;
+
+    color: var(--Orange, #EC7000);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+
+    span {
+      margin-right: 2.01px;
+    }
+  }
+}
+
+nz-layout,
+nz-sider {
+  min-height: calc(100vh - 80px) !important;
+}
+
+nz-sider {
+  background: #fff !important;
+  flex: 0 0 300px !important;
+  max-width: 300px !important;
+  width: 300px !important;
+
+  * {
+    background: #fff !important;
+  }
+}
+
+.alert-badge {
+  .ant-badge-dot {
+    background: #EC7000;
+    top: 8px !important;
+    right: 6px !important;
+  }
+}
+
+.status-circle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p,
+  h3 {
+    margin: 0 !important;
+  }
+
+  svg {
+    margin-right: 10px;
+
+    circle {
+      &.enviada {
+        fill: var(--Orange, #EC7000) !important;
+      }
+
+      &.aprovada {
+        fill: var(--Sucess, #4CAF50) !important;
+      }
+
+      &.finalizada {
+        fill: #13CAE3 !important;
+      }
+
+      &.pendente {
+        fill: #FFB800 !important;
+      }
+    }
+  }
+}
+
+.ant-picker-separator {
+  span {
+    color: #EC7000;
+  }
+}
+
+nz-date-picker,
+nz-range-picker {
+  border-radius: 12px !important;
+  padding: 16px !important;
+  border: 1px solid var(--Light-Gray, #E9EEF6) !important;
+  background-color: var(--Light-Gray, #E9EEF6) !important;
+}
+
+nz-select {
+  border-radius: 12px !important;
+  padding: 11px !important;
+  border: 1px solid var(--Light-Gray, #E9EEF6) !important;
+  background-color: var(--Light-Gray, #E9EEF6) !important;
+
+  nz-select-top-control {
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+.input-container {
+  margin-bottom: 30px;
+}
+
+input {
+  &.noventa-input {
+    border-radius: 12px !important;
+    padding: 16px !important;
+    border: 1px solid var(--Light-Gray, #E9EEF6) !important;
+    background-color: var(--Light-Gray, #E9EEF6) !important;
+    margin-top: 5px;
+  }
+
+  &.hasError {
+    border: 1px solid red !important;
+  }
+}
+
+nz-input-group {
+  border-radius: 12px !important;
+  padding: 16px !important;
+  border: 1px solid var(--Light-Gray, #E9EEF6) !important;
+  background-color: var(--Light-Gray, #E9EEF6) !important;
+
+  input {
+    background-color: var(--Light-Gray, #E9EEF6) !important;
+    color: var(--medium-gray-input, #9297A1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+nz-table {
+
+  .answerTableInput {
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--Light-Gray, #E9EEF6);
+    border: none;
+
+    &.date {
+      width: 85px;
+    }
+  }
+
+  .ant-table-content {
+    table {
+      border-spacing: 0 16.22px;
+
+      tbody {
+        color: var(--Black, #282828);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        tr {
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+          margin-bottom: 16.22px;
+          border-spacing: 0;
+        }
+      }
+
+      thead {
+        color: var(--dark-gray-label, #626262);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        tr {
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+          border-radius: 10px 10px 0 0;
+          border-spacing: 0;
+
+          th {
+            background-color: #E9EEF6;
+            border-bottom: none;
+
+            &:first-child {
+              border-top-left-radius: 10px !important;
+            }
+
+            &:last-child {
+              border-top-right-radius: 10px !important;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.answerTable {
+    .ant-table-content {
+      table {
+        padding: 0 4px;
+
+        tbody {
+          font-size: 12px;
+
+          tr {
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+
+            &.disabled-line {
+              background-color: #F3F3F3;
+
+              input {
+                background-color: #E5E5E5;
+              }
+
+              * {
+                color: rgba(98, 98, 98, 0.50);
+              }
+            }
+
+            &:last-child {
+              border-radius: 0 0 20px 20px;
+            }
+
+            td {
+              &.ant-table-selection-column {
+                .ant-checkbox-inner {
+                  background-color: #1890ff;
+                  border-color: #1890ff !important;
+
+                  &::after {
+                    border-color: #fff;
+                  }
+                }
+
+                &.disabled-chck {
+                  .ant-checkbox-inner {
+                    background-color: #f5f5f5;
+                    border-color: #d9d9d9 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-pagination {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.pagination-container {
+  .ant-pagination-item {
+    border: none;
+  }
+
+  .ant-pagination-item-active {
+    background-color: #0074B0;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    line-height: 0;
+
+    button {
+      border: none;
+    }
+  }
+}
+
+.brad-page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .regional {
+    color: var(--Blue, #0074B0);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  nz-breadcrumb {
+    color: var(--Blue, #0074B0) !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  nz-breadcrumb-separator {
+    span {
+      color: var(--Blue, #0074B0) !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .ant-breadcrumb>nz-breadcrumb-item:last-child {
+    color: var(--Blue, #0074B0) !important;
+    font-weight: 700;
+  }
+}
+
+.bar-adjust {
+  height: calc(100vh - 400px);
+  padding: 12px 12px 0 12px;
+  margin-bottom: 58px;
+}
+
+.noventa-box-shadow {
+  box-shadow: 0 0 5px 1px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.answerAlert {
+  width: 40rem;
+
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.25px;
+    margin-top: 50px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: var(--dark-gray-label, #626262);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 31px;
+    letter-spacing: 0.15px;
+    padding: 0 60px;
+    margin: 0;
+
+    b {
+      color: var(--dark-gray-label, #626262);
+      font-size: 17px;
+    }
+  }
+
+  button {
+    width: 325px;
+
+    &.swal2-close {
+      width: 50px;
+      color: #0074B0;
+      margin: 28px 18px 0 0;
+    }
+  }
+}
+
+.btn {
+  &.noventa-btn-outline {
+    border: 1px solid #EC7000;
+    color: #EC7000;
+
+    &:hover {
+      background-color: #EC7000;
+      color: #fff;
+    }
+  }
+
+  &.noventa-btn {
+    background-color: #EC7000;
+    color: #fff;
+
+    &:hover {
+      border: 1px solid #EC7000;
+      background-color: #fff;
+      color: #EC7000;
+    }
+  }
+}
+
+.ant-steps-item {
+  &.ant-steps-item-active {
+    &.ant-steps-item-process {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          span {
+            span {
+              background: #4CAF50;
+            }
+          }
+        }
+      }
+    }
+  }
+}
